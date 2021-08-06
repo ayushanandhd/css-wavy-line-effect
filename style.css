@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+.wavy{
+    position: relative;
+    width: 50vw;
+    height: 20vh;
+    overflow: hidden;
+}
+.wavy::before{
+    content: "aaaaaaaaaaaaaaaaaa";
+    position: absolute;
+    left: 0;
+    top: -107px;
+    font-size: 10em;
+    color: transparent;
+    text-decoration-style: wavy;
+    text-decoration-color: white;
+    text-decoration-line: underline;
+    animation: animate 0.5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translateX(-1px);
+    }
+    100%{
+        transform: translateX(-68px);
+    }
+}
